@@ -58,7 +58,7 @@ typedef struct {
 #if defined(__cplusplus)
 	extern "C" {
 #endif
-		
+
 int _PWQ_EXPORT pthread_workqueue_create_np(pthread_workqueue_t * workqp,
                const pthread_workqueue_attr_t * attr);
 
@@ -95,11 +95,11 @@ void _PWQ_EXPORT pthread_workqueue_suspend_np(void);
 void _PWQ_EXPORT pthread_workqueue_resume_np(void);
 void _PWQ_EXPORT pthread_workqueue_signal_np(void);
 
-void _PWQ_EXPORT (*libpwq_thread_cleanup_handler)();
+extern void _PWQ_EXPORT (*libpwq_thread_cleanup_handler)();
 #if defined(__cplusplus)
 	}
 #endif
-			
+
 #undef _PWQ_EXPORT
 
 #endif  /* _PTHREAD_WORKQUEUE_H */

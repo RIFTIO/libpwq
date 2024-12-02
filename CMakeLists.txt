@@ -122,7 +122,12 @@ add_library(pthread_workqueue
             ${LIBRARY_TYPE}
               ${PTHREAD_WORKQUEUE_SOURCES}
               ${PTHREAD_WORKQUEUE_HEADERS})
-set_target_properties(pthread_workqueue PROPERTIES DEBUG_POSTFIX "d")
+set_target_properties(pthread_workqueue
+  PROPERTIES
+    DEBUG_POSTFIX "d"
+    VERSION 0.9.2
+    SOVERSION 0
+)
 
 if(WIN32)
   target_compile_definitions(pthread_workqueue PRIVATE
